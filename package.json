@@ -1,0 +1,30 @@
+{
+  "name": "audphy",
+  "version": "1.0.0",
+  "description": "Premium audiophile music streaming application with YouTube integration",
+  "main": "server/src/index.js",
+  "scripts": {
+    "install-all": "npm install && npm install --prefix client && npm install --prefix server && node scripts/install-ytdlp.js",
+    "setup": "npm run install-all",
+    "dev": "concurrently \"npm run dev --prefix server\" \"npm start --prefix client\"",
+    "start": "npm start --prefix server",
+    "build": "npm run build --prefix client",
+    "server": "npm start --prefix server",
+    "client": "npm start --prefix client",
+    "install-ytdlp": "node scripts/install-ytdlp.js"
+  },
+  "keywords": ["music", "streaming", "audiophile", "youtube", "react", "nodejs"],
+  "author": "AudPhy Team",
+  "license": "MIT",
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  },
+  "devDependencies": {
+    "concurrently": "8.2.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "private"
+  }
+}
